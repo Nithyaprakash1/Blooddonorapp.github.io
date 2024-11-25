@@ -1,3 +1,4 @@
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column size dynamically */
@@ -90,4 +91,24 @@
   .feature-item p {
     font-size: 0.85rem;
   }
+}
+
+.nav__links a {
+    /* ... other styles for the links ... */
+    position: relative; /* Needed for the pseudo-element */
+}
+
+
+.nav__links a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit; /* Inherits border-radius from the link */
+    z-index: -1; /* Place it behind the link text */
+
+    /* add transition for a smoother effect on hover */
+    transition: box-shadow 0.3s ease;
 }
