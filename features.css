@@ -1,0 +1,28 @@
+
+
+
+/* Features Grid Styling */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  background-color: #34495e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+
+.feature-item i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #e74c3c;
+}
+
