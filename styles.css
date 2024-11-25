@@ -201,17 +201,17 @@ section:nth-of-type(1) {
 
 section:nth-of-type(2) {
 	--content-size: 186px;
-	height: 200vh;
+	height: 400vh;
 }
 
 section:nth-of-type(3) {
 	--content-size: 180px;
-  height: 200vh;
+  height: 300vh;
 }
 
 section:nth-of-type(4) {
 	--content-size: 140px;
-	height: 400vh;
+	height: 500vh;
 }
 
 /* Use style queries to dictate the timing, etc. */
