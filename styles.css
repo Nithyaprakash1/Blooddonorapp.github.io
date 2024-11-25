@@ -314,7 +314,7 @@ nav a:hover {
 }
 
 nav a:hover::before {
-  box-shadow: 0 0 10px 5px rgba(0, 112, 204, 0.5); /* Larger glow on hover */
+   box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);
 }
 
 nav img {
@@ -476,4 +476,11 @@ video {
 
 .store-btn i {
   margin-right: 0.5rem;
+}
+
+.google-play-button {
+  width: 150px; /* Adjust width as needed */
+  height: auto;   /* Maintain aspect ratio */
+  display: block; /* Ensures the image acts as a block element */
+  margin: 0 auto; /* Center the image horizontally */
 }
