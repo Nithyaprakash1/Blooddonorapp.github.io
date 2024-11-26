@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donor App - Splash Screen</title>
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ff3131;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Animation Container */
+    .animation-container {
+      text-align: center;
+      opacity: 1;
+      transition: opacity 1s ease-in-out; /* Transition effect for fade-out */
+    }
+
+    /* Logo Styles */
+    .logo img {
+      width: 120px; /* Adjust size as needed */
+      animation: fadeIn 2s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    /* Animated Text */
+    .animated-text {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 0;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out 1s forwards;
+    }
+
+    .tagline {
+      font-size: 1.2em;
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out 2s forwards;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <script>
+    // Wait before triggering the fade-out and redirect
+    setTimeout(() => {
+      const container = document.querySelector('.animation-container');
+      container.style.opacity = '0'; // Trigger fade-out
+      setTimeout(() => {
+        window.location.href = "home.html"; // Redirect after fade-out
+      }, 1000); // Match this to the transition duration
+    }, 4000); // Total display time of splash screen
+  </script>
+</head>
+<body>
+  <div class="animation-container">
+    <div class="logo">
+      <!-- Simplified Logo Animation -->
+      <img src="assets/logo.ico" alt="App Logo">
+    </div>
+    <h1 class="animated-text">Blood Donor App</h1>
+    <p class="tagline">Saving lives, one drop at a time</p>
+  </div>
+</body>
+</html>
